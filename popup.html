@@ -28,17 +28,29 @@
   </head>
   <body>
     <!-- タイトル -->
-    <div class="container py-1 px-2 border-bottom">
-      <header>konami2popup</header>
+    <div class="container py-1 px-2 mb-2 border-bottom">
+      <header data-locale="name">konami2popup</header>
     </div>
 
     <!-- 設定 -->
-    <div class="container py-1 px-2 mb-1 border-bottom">
-      <h2 class="fs-5">Settings</h2>
+    <div class="container py-1 px-2 mb-2 border-bottom">
+      <h2
+        id="setting-headder"
+        data-locale="popup_headder_settings"
+        class="fs-5"
+      >
+        Settings
+      </h2>
       <form>
         <!-- 幅 -->
-        <div class="row mb-1">
-          <label for="width" class="col-sm-2 col-form-label"> Width </label>
+        <div class="row">
+          <label
+            for="width"
+            data-locale="settings_label_width"
+            class="col-sm-2 col-form-label"
+          >
+            Width
+          </label>
           <div class="col-sm-4">
             <input
               type="number"
@@ -51,8 +63,14 @@
         </div>
 
         <!-- 高さ -->
-        <div class="row mb-3">
-          <label for="height" class="col-sm-2 col-form-label">Height</label>
+        <div class="row mb-2">
+          <label
+            for="height"
+            data-locale="settings_label_height"
+            class="col-sm-2 col-form-label"
+          >
+            Height
+          </label>
           <div class="col-sm-4">
             <input
               type="number"
@@ -66,8 +84,13 @@
       </form>
 
       <!-- 保存 -->
-      <div class="input-group">
-        <button type="button" class="btn btn-md btn-primary" id="setSize">
+      <div class="input-group mb-2">
+        <button
+          type="button"
+          data-locale="settings_save"
+          class="btn btn-md btn-primary"
+          id="setSize"
+        >
           Save Changes
         </button>
       </div>
@@ -75,7 +98,7 @@
 
     <!-- コマンド -->
     <div class="container py-1 px-2">
-      <h2 class="fs-5">Trigger</h2>
+      <h2 data-locale="popup_headder_trigger" class="fs-5">Trigger</h2>
       <p class="text-center">
         <svg><use xlink:href="src/img/fa.svg#fa-arrow-up"></use></svg>
         <svg><use xlink:href="src/img/fa.svg#fa-arrow-up"></use></svg>

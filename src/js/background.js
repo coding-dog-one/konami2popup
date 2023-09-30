@@ -11,7 +11,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
     // コンテキストメニューを更新
     chrome.contextMenus.update("popthis", {
-      title: `Pop up this page (${width}px x ${height}px)`,
+      title: chrome.i18n.getMessage("context_popthis", [width, height]),
     });
 
     // サイズ設定をローカルストレージに保存
@@ -34,7 +34,10 @@ chrome.runtime.onInstalled.addListener(function (details) {
   loadSize().then((size) => {
     chrome.contextMenus.create({
       id: "popthis",
-      title: `Pop up this page (${size.width}px x ${size.height}px)`,
+      title: chrome.i18n.getMessage("context_popthis", [
+        size.width,
+        size.height,
+      ]),
       contexts: ["all"],
     });
   });

@@ -1,0 +1,30 @@
+{
+  "Name": {
+    "message": "konami2popup"
+  },
+  "Description": {
+    "message": "An extension that pops up a page when a Konami command is entered."
+  },
+  "context_popthis": {
+    "message": "Pop up this page ($width$px x $height$px)",
+    "placeholders": {
+      "width": { "content": "$1" },
+      "height": { "content": "$2" }
+    }
+  },
+  "popup_headder_settings": {
+    "message": "Settings"
+  },
+  "popup_headder_trigger": {
+    "message": "Trigger"
+  },
+  "settings_label_width": {
+    "message": "Width (px)"
+  },
+  "settings_label_height": {
+    "message": "Height (px)"
+  },
+  "settings_save": {
+    "message": "Save Changes"
+  }
+}

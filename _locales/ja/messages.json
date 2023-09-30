@@ -1,0 +1,30 @@
+{
+  "name": {
+    "message": "コナミでポン！"
+  },
+  "description": {
+    "message": "例のコマンドで、今開いているページを任意のサイズでポップアップさせます。"
+  },
+  "context_popthis": {
+    "message": "このページを別窓で開く（$width$px x $height$px）",
+    "placeholders": {
+      "width": { "content": "$1" },
+      "height": { "content": "$2" }
+    }
+  },
+  "popup_headder_settings": {
+    "message": "設定"
+  },
+  "popup_headder_trigger": {
+    "message": "コマンド"
+  },
+  "settings_label_width": {
+    "message": "横幅（px）"
+  },
+  "settings_label_height": {
+    "message": "高さ（px）"
+  },
+  "settings_save": {
+    "message": "保存する"
+  }
+}

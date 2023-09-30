@@ -18,8 +18,22 @@ chrome.runtime.sendMessage({ action: "getSize" }).then((resp) => {
   document.getElementById("height").value = resp.height;
 });
 
-// ライト/ダークテーマに応じて色を変える
-const theme = window.matchMedia("(prefers-color-scheme: dark)").matches
-  ? "dark"
-  : "light";
-document.body.dataset.bsTheme = theme;
+setThemeColor();
+localizeHtmlPage();
+
+function setThemeColor() {
+  const theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+
+  // <body>のdata-bs-themeが"dark"ならダークテーマ、"light"ならライトテーマになる
+  // https://getbootstrap.com/docs/5.3/customize/color-modes/#dark-mode
+  document.body.dataset.bsTheme = theme;
+}
+
+function localizeHtmlPage() {
+  // https://stackoverflow.com/a/56429696
+  document.querySelectorAll("[data-locale]").forEach((elem) => {
+    elem.innerText = chrome.i18n.getMessage(elem.dataset.locale);
+  });
+}
