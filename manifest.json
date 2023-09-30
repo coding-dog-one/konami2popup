@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "konami2popup",
+  "version": "1.0",
+  "description": "An extension that pops up a page when a Konami command is entered.",
+  "permissions": ["activeTab", "storage", "scripting", "contextMenus"],
+  "action": {
+    "default_icon": {
+      "16": "src/img/icon.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "src/js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/js/content.js"]
+    }
+  ]
+}
