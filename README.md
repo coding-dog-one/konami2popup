@@ -9,7 +9,7 @@
 方法は 2 通りあります。
 
 1. このリポジトリを git clone してインストールする
-2. Chrome ウェブストアからインストールする
+2. [Chrome ウェブストア](https://chrome.google.com/webstore/detail/goijagbnekfkigfpaiflplmmhkljkald)からインストールする
 
 すみませんが、1 はググってください。2 はすでにご存じだと思うので省略します。
 
